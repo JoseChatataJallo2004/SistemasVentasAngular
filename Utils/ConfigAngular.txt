@@ -1,0 +1,11 @@
+npm i @angular/material v18
+ng add @angular/material
+
+npm i @angular/material-moment-adapter@17.3.10 -vA17 & 
+npm i chart.js
+npm i xlsx
+
+//Generar interfaz
+ng generate interface ResponseApi
+//Generar modulo
+ng g m Shared

@@ -1,0 +1,27 @@
+DAL =CAPA DE DATOS
+BLL =CAPA DE NEGOCIOS
+Model=CAPA DE MODELOS
+IOC=INVERSION DE CONTROL DE DEPENDENCIAS
+DTO=CLASES SIMILARES A NUESTROS MODELOS COMPARTIR LA INFO
+Utility=UTILS PARA TODO EL PROYECTO EN GENERAL
+
+CAPA MODEL
+Instalar los paquetes :
+	Microsoft.EntityFrameworkCore.Tools 
+	Microsoft.EntityFrameworkCore.SqlServer
+En consola 
+
+Scaffold-DbContext "Server=LAPTOP-II7GN3D1\SQLEXPRESS;DataBase=DBVENTANetAngular;Trusted_Connection=True;TrustServerCertificate=True" -Provider Microsoft.EntityFrameworkCore.SqlServer
+
+--REFERENCIAS PROJECT
+DALL OBTIENE DE MODEL
+BLL OBTIENE DALL,MODEL,DTO,UTILITY
+IOC OBTIENE DE BLL,DAL,UTILITY 
+UTILITY OBTIENE DTO,MODEL
+PROYECTO API=BLL,DTO,IOC
+
+
+CAPA UTILITY
+Instalar los paquetes :
+	AutoMapper
+	AutoMapper.Extensions.Microsoft.DependencyInjection
